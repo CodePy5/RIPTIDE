@@ -14,4 +14,4 @@ Set-Content -Path "C:\RIPTIDE.ppkg" -Value $bytes -Encoding Byte
 #This removes existing provisioning packages to ensure a fresh start and prevent any conflicts, especially on Windows 10
 Uninstall-ProvisioningPackage -AllInstalledPackages
 #This applies the provisioning package without prompting
-Install-ProvisioningPackage -PackagePath C:\waste.ppkg -QuietInstall -ForceInstall
+Install-ProvisioningPackage -PackagePath C:\RIPTIDE.ppkg -QuietInstall -ForceInstall
