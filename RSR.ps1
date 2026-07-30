@@ -9,7 +9,7 @@
 Write-Host "Checking for administrator access...`n"
 if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator"))  
 {  
-    $arguments = "-ep bypass `"irm 'https://codepy5.github.io/RIPTIDE/RSR.ps1'|iex`""
+    $arguments = "-ep bypass `"irm 'https://riptide.codepy.org/RSR.ps1|iex`""
     Write-Host "Another process is being launched to continue execution... please leave this window open and accept a UAC prompt if presented."
     Start-Process powershell -Verb runAs -ArgumentList $arguments -Wait
 } else {
